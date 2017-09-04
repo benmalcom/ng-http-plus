@@ -1,0 +1,42 @@
+{
+  "name": "ng2-http-plus",
+  "version": "1.0.0",
+  "description": "Customize your angular2 http requests",
+  "scripts": {
+    "clean": "shx rm -rf lib lib-esm lib-umd",
+    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
+  },
+  "files": [
+    "lib",
+    "lib-esm",
+    "lib-umd"
+
+  ],
+  "main": "lib-esm/index.js",
+  "types": "lib-esm/index.d.ts",
+  "author": "Ikeji Benjamin <benjaminikeji@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "http",
+    "plus",
+    "customize",
+    "enhance",
+    "angular2"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benmalcom/ng2-http-plus"
+  },
+  "devDependencies": {
+    "@angular/common": "^4.4.0-RC.0",
+    "@angular/core": "^4.4.0-RC.0",
+    "@angular/http": "^4.4.0-RC.0",
+    "@angular/platform-browser": "^4.4.0-RC.0",
+    "awesome-typescript-loader": "^3.2.3",
+    "rxjs": "^5.4.3",
+    "shx": "^0.2.2",
+    "typescript": "^2.5.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.5"
+  }
+}
