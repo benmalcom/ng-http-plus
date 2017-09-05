@@ -16,7 +16,7 @@
 
 Import the `Ng2HttpPlusModule` in your module:
     
-    
+    javascript
     import {NgModule} from '@angular/core';
      import {Ng2HttpPlusModule} from 'ng2-http-plus';
      
@@ -31,7 +31,7 @@ Import the `Ng2HttpPlusModule` in your module:
      
 To send requests, import the `HttpPlusService` and http verbs in your component or service:
 
-   
+     javascript
      import {HttpPlusService,GET,PUT,POST} from 'ng2-http-plus';
      import {Component, OnInit} from '@angular/core';
      
@@ -66,43 +66,41 @@ by default.
    the url your request will be sent to. This method returns an HttpPlusService instance
    for method chaining. This method is mandatory.
    
-   ```
-   //example
+    javascript
+    //example
     this.httpPlus.setUrl('http://example-url.com'); 
-   ```
    
 #### setQueryString(prop: string, value: any)
    When you need to append a query string to your url, this is the method to invoke.
    This method returns an HttpPlusService instance for method chaining.
 
- ```
+    javascript
     this.httpPlus.setQueryString('user_id',3); 
-    //url looks like this => 'http://example-url.com?user_id=3'
-    ````
-    Invoke the method multiple times to set multiple query strings
-   ```
+    // url looks like this => 'http://example-url.com?user_id=3'
+    
+Invoke the method multiple times to set multiple query strings
+ 
 #### setHeader(value: any)
    This method sets a header property 'Content-Type' to be equal to the value.
    This method returns an HttpPlusService instance for method chaining.
 
- ```
+    javascript
     this.httpPlus.setHeader('application/json'); 
     //=> 'Content-Type': 'application/json'
     
     Invoke the method multiple times to set multiple headers
-   ```
+   
 
 #### setCustomHeader(prop: string, value: any)
    This method sets a user-defined header property to be equal to the 
    provided value.
    This method returns an HttpPlusService instance for method chaining.
 
- ```
+    javascript
     this.httpPlus.setCustomHeader('x-user-token', 'xxxxxxxxxx'); 
     //=> 'x-user-token': 'xxxxxxxxxx'
     
-    Invoke the method multiple times to set multiple custom headers
-   ``` 
+Invoke the method multiple times to set multiple custom headers
    
 #### send(method: string, body: any)
    This method sends the request. It can be called immediately after the 
@@ -110,22 +108,23 @@ by default.
    The method accepts the request method and optional payload.
    This method returns an Observable type of Response.
 
- ```
+    javascript
     this.httpPlus.send(POST, {name: 'John Doe'}); 
-   ```
+   
    
 ### Sample Usage
 This is a sample POST request.
-```angular2html
-        this.httpPlus
-            .setUrl('http://example-url.com')
-            .setQueryString('user_id',5)
-            .setHeader('application/json')
-            .setCustomHeader('x-access','xyxyxy')
-            .send(POST,{name:'John Doe', age: 24})
-            .subscribe( 
-              success => {},
-              error => {},
-              () => console.log('Request Complete')
-            ); 
-```
+
+    javascript
+    this.httpPlus
+        .setUrl('http://example-url.com')
+        .setQueryString('user_id',5)
+        .setHeader('application/json')
+        .setCustomHeader('x-access','xyxyxy')
+        .send(POST,{name:'John Doe', age: 24})
+        .subscribe( 
+          success => {},
+          error => {},
+          () => console.log('Request Complete')
+        ); 
+
