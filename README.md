@@ -35,8 +35,8 @@ import {Ng2HttpPlusModule} from 'ng2-http-plus';
 To send requests, import the `HttpPlusService` and http verbs in your component or service:
 
 ```javascript
- import {HttpPlusService,GET,PUT,POST} from 'ng2-http-plus';
  import {Component, OnInit} from '@angular/core';
+ import {HttpPlusService,GET,PUT,POST} from 'ng2-http-plus';
  
  @Component({
      selector: 'some',
