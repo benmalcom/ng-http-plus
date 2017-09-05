@@ -8,7 +8,9 @@
 
 ***
 
-     npm install --save ng2-http-plus
+```
+npm install --save ng2-http-plus
+```
      
 ### Getting Started
 
