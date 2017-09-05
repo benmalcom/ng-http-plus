@@ -1,8 +1,8 @@
 # **ng2-http-plus**
 
-   Provides a fun and simple way to send http requests with angular2.
-   
-   *Just a few lines of code, written on top of angular2 http.*
+Customize your angular2 http requests.
+
+*Just a few lines of code, written on top of angular2 http.*
   
 ### Installation
 
