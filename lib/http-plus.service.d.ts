@@ -10,8 +10,8 @@ export declare class HttpPlusService {
     setUrl(url: string): this;
     setQueryString(prop: string, value: any): this;
     setHeader(value: any): this;
-    setCustomHeader(key: string, value: string): this;
-    send(method: string, body?: any): Observable<Response>;
+    setCustomHeader(prop: string, value: string): this;
+    send(method?: string, body?: any): Observable<Response>;
     private buildRequest(method, body?);
     private clear();
 }

@@ -10,7 +10,6 @@
     "lib",
     "lib-esm",
     "lib-umd"
-
   ],
   "main": "lib-esm/index.js",
   "types": "lib-esm/index.d.ts",

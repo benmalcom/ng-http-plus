@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, URLSearchParams } from "@angular/http";
-import { POST, PUT, DELETE } from "./helper";
+import { POST, PUT, DELETE, GET } from "./helper";
 var HttpPlusService = (function () {
     function HttpPlusService(http) {
         this.http = http;
@@ -33,15 +33,16 @@ var HttpPlusService = (function () {
         }
         return this;
     };
-    HttpPlusService.prototype.setCustomHeader = function (key, value) {
-        if (key && value)
-            this.headers.set(key, value);
+    HttpPlusService.prototype.setCustomHeader = function (prop, value) {
+        if (prop && value)
+            this.headers.set(prop, value);
         return this;
     };
     HttpPlusService.prototype.send = function (method, body) {
+        if (method === void 0) { method = GET; }
         if (body === void 0) { body = {}; }
         if (!this.requestUrl) {
-            throw new Error("Error: Call the setUrl method to set the request url before building your request.");
+            throw new Error("Error: the request url is not set.");
         }
         return this.buildRequest(method, body);
     };
@@ -52,7 +53,7 @@ var HttpPlusService = (function () {
         this.requestOptions['search'] = this.queryString;
         var requestOptions = this.requestOptions;
         var url = this.requestUrl;
-        var httpRequest = this.http.get(url, requestOptions);
+        var httpRequest = null;
         switch (method) {
             case POST:
                 httpRequest = this.http.post(url, body, requestOptions);
@@ -63,6 +64,15 @@ var HttpPlusService = (function () {
             case DELETE:
                 httpRequest = this.http.delete(url, requestOptions);
                 break;
+            case GET:
+                httpRequest = this.http.get(url, requestOptions);
+                break;
+            default:
+                httpRequest = this.http.get(url, requestOptions);
+                break;
+        }
+        if (!httpRequest) {
+            throw new Error("Error: Nothing to send. Follow the instructions in setting up your request");
         }
         return httpRequest;
     };
