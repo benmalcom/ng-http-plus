@@ -1,1 +1,0 @@
-{"version":3,"file":"ng2-http-plus.module.js","sourceRoot":"","sources":["../src/ng2-http-plus.module.ts"],"names":[],"mappings":";;;;;;AAGA,OAAO,EAAC,QAAQ,EAAC,MAAM,eAAe,CAAC;AACvC,OAAO,EAAC,eAAe,EAAC,MAAM,qBAAqB,CAAC;AAKpD;IAAA;IAEA,CAAC;IAFY,iBAAiB;QAH7B,QAAQ,CAAC;YACN,SAAS,EAAE,CAAC,eAAe,CAAC;SAC/B,CAAC;OACW,iBAAiB,CAE7B;IAAD,wBAAC;CAAA,AAFD,IAEC;SAFY,iBAAiB"}

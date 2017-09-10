@@ -2,8 +2,12 @@
   "name": "ng2-http-plus",
   "version": "1.0.0",
   "description": "Customize your angular2 http requests",
+  "engines": {
+    "node": "8.4.0"
+  },
   "scripts": {
     "clean": "shx rm -rf lib lib-esm lib-umd",
+    "test": "karma start",
     "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
   },
   "files": [
@@ -28,14 +32,34 @@
   },
   "devDependencies": {
     "@angular/common": "^4.4.0-RC.0",
+    "@angular/compiler": "^4.4.0-RC.0",
+    "@angular/compiler-cli": "^4.4.0-RC.0",
     "@angular/core": "^4.4.0-RC.0",
     "@angular/http": "^4.4.0-RC.0",
     "@angular/platform-browser": "^4.4.0-RC.0",
+    "@angular/platform-browser-dynamic": "^4.4.0-RC.0",
+    "@types/core-js": "^0.9.43",
+    "@types/jasmine": "^2.5.54",
+    "@types/node": "^8.0.28",
+    "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.2.3",
+    "i": "^0.3.5",
+    "jasmine": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-typescript": "^3.0.5",
+    "karma-typescript-preprocessor": "^0.3.1",
+    "karma-webpack": "^2.0.4",
+    "node-static": "^0.7.9",
+    "raw-loader": "^0.5.1",
+    "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.3",
     "shx": "^0.2.2",
     "typescript": "^2.5.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
-    "webpack": "^3.5.5"
-  }
+    "webpack": "^2.1.0-beta.22",
+    "zone.js": "^0.8.17"
+  },
+  "dependencies": {}
 }
