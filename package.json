@@ -9,8 +9,7 @@
     "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack",
     "clean": "shx rm -rf lib lib-esm lib-umd",
     "test": "karma start",
-    "test:travis": "karma start --single-run  --no-auto-watch",
-    "version": "npm version patch"
+    "test:travis": "karma start --single-run  --no-auto-watch"
   },
   "files": [
     "lib",
