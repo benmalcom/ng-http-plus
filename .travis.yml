@@ -18,7 +18,7 @@ before_script:
 - npm install -g @angular/cli
 - npm install -g karma
 - npm install
-script: npm test:travis
+script: npm run test:travis
 before_deploy: npm run build
 deploy:
   api_key:
