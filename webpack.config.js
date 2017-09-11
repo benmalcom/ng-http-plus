@@ -14,9 +14,9 @@ module.exports = {
 		umdNamedDefine: true
 	},
 	resolve: {
-		extensions: ['.ts', '.tsx', '.js']
+		extensions: ['.ts', '.tsx', '.js'],
+		modules: ["node_modules"]
 	},
-	resolveLoader: { fallback: path.join(__dirname, "node_modules") },
 	devtool: 'source-map',
 	plugins: [
 		new UglifyJsPlugin({
