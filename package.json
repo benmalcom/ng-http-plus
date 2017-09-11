@@ -6,10 +6,11 @@
     "node": "8.4.0"
   },
   "scripts": {
+    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack",
     "clean": "shx rm -rf lib lib-esm lib-umd",
     "test": "karma start",
     "test:travis": "karma start --single-run  --no-auto-watch",
-    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
+    "version": "npm version patch"
   },
   "files": [
     "lib",
