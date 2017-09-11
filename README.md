@@ -1,8 +1,6 @@
 # **ng2-http-plus**
 
-Customize your angular2 http requests.
-
-*Just a few lines of code, written on top of angular2 http.*
+This library helps you to send http requests with angular2 using helper methods.
   
 ### Installation
 
