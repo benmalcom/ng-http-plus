@@ -1,4 +1,5 @@
 # **ng2-http-plus**
+[![Build Status](https://travis-ci.org/benmalcom/ng2-http-plus.svg?branch=master)](https://travis-ci.org/benmalcom/ng2-http-plus)
 
 This library helps you to send http requests with angular2 using helper methods.
   
