@@ -1,7 +1,7 @@
 {
   "name": "ng2-http-plus",
   "version": "1.0.0",
-  "description": "Customize your angular2 http requests",
+  "description": "Send http requests in angular2 with helper methods",
   "engines": {
     "node": "8.4.0"
   },
