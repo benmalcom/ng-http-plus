@@ -1,7 +1,7 @@
 {
   "name": "ng2-http-plus",
   "version": "1.0.0",
-  "description": "Send http requests in angular2 with helper methods",
+  "description": "Send http requests in angular2/angular4 with helper methods",
   "engines": {
     "node": "8.4.0"
   },
@@ -23,9 +23,10 @@
   "keywords": [
     "http",
     "plus",
-    "customize",
+    "helper methods",
     "enhance",
-    "angular2"
+    "angular2",
+    "angular4"
   ],
   "repository": {
     "type": "git",
